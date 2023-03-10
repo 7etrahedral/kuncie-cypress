@@ -33,7 +33,7 @@
       "enabled": true
     },
     "json": {
-      "enabled": false,
+      "enabled": true,
       "formatter": "cypress/support/cucumber-json-formatter"
     }
   }

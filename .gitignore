@@ -8,3 +8,6 @@ videos/
 cypress/.DS_Store
 
 cypress.env.json
+cucumber-message*
+cucumber-report.html
+cucumber-report.json
