@@ -5,20 +5,36 @@
   "main": ".eslintrc.js",
   "scripts": {
     "test": "cypress run --headed --browser chrome --spec cypress/e2e/demoblaze/*-test.cy.js",
+    "test:cucumber": "cypress run",
     "open": "cypress open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/7etrahedral/cypress-poc.git"
+    "url": "git@github.com:7etrahedral/kuncie-cypress.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/7etrahedral/cypress-poc/issues"
+    "url": "https://github.com/7etrahedral/kuncie-cypress/issues"
   },
-  "homepage": "https://github.com/7etrahedral/cypress-poc#readme",
+  "homepage": "https://github.com/7etrahedral/kuncie-cypress#readme",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cosmiconfig": "^8.1.0",
     "cypress": "^12.6.0",
-    "cypress-mochawesome-reporter": "^3.3.0"
+    "cypress-mochawesome-reporter": "^3.3.0",
+    "typescript": "^4.9.5"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/scenario/*.js",
+    "html": {
+      "enabled": true
+    },
+    "json": {
+      "enabled": false,
+      "formatter": "cypress/support/cucumber-json-formatter"
+    }
   }
 }
