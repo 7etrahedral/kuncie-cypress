@@ -5,7 +5,7 @@
   "main": ".eslintrc.js",
   "scripts": {
     "test": "cypress run --headed --browser chrome --spec cypress/e2e/demoblaze/*-test.cy.js",
-    "test:cucumber": "cypress run",
+    "test:cucumber": "cypress run --headed --browser chrome --config '{\"specPattern\": \"**/*.feature\"}'",
     "open": "cypress open"
   },
   "repository": {

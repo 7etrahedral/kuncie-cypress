@@ -13,7 +13,6 @@ When(/^Bambang input a valid credential as hore$/, () => {
   cy.get(`[onclick='logIn()']`).click();
 });
 
-
 Then(/^Bambang should see Log out button$/, () => {
 	cy.wait(2000);
   cy.get('#nameofuser').should('contain', 'hore');
